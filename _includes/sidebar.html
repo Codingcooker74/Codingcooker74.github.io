@@ -1,0 +1,18 @@
+<aside class="sidebar">
+  <div class="sidebar-section">
+    <h3>Menu</h3>
+    <ul>
+      <li><a href="{{ site.baseurl }}/">Home</a></li>
+      <li><a href="{{ site.baseurl }}/about">About</a></li>
+    </ul>
+  </div>
+
+  <div class="sidebar-section">
+    <h3>Archives</h3>
+    <ul>
+      {% for post in site.posts limit:5 %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</aside>

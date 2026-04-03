@@ -1,0 +1,14 @@
+<article class="post-card">
+  <header class="post-card-header">
+    <h2 class="post-card-title">
+      <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+    </h2>
+    <span class="post-card-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  </header>
+  <div class="post-card-excerpt">
+    {{ post.excerpt | strip_html | truncatewords: 30 }}
+  </div>
+  <footer class="post-card-footer">
+    <a href="{{ post.url | relative_url }}" class="read-more">Read More &rarr;</a>
+  </footer>
+</article>

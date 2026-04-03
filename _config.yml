@@ -1,37 +1,27 @@
 title: Codingcooker74's Blog
-tagline: 코딩과 개발에 관한 다양한 이야기를 풀어내는 공간입니다.
 description: 코딩과 개발에 관한 다양한 이야기를 풀어내는 공간입니다.
 url: "https://Codingcooker74.github.io"
 baseurl: ""
 
-github:
-  username: Codingcooker74
-twitter:
-  username: codingcooker
-social:
+author:
   name: Codingcooker74
   email: your-email@example.com
 
-timezone: Asia/Seoul
-lang: ko-KR
-
-theme: jekyll-theme-chirpy
-
-paginate: 10
-paginate_path: "/page:num/"
-
+# Build settings
 plugins:
-  - jekyll-paginate
+  - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-archives
 
-archives:
-  enabled:
-    - categories
-    - tags
-  layouts:
-    category: category
-    tag: tag
-  permalinks:
-    category: /categories/:name/
-    tag: /tags/:name/
+# Exclude from processing.
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - .jekyll-metadata
+  - vendor/
+  - .bundle/
+  - Gemfile
+  - Gemfile.lock
+  - auto_blog.py
+  - new_post.bat
+  - README.md
+  - plans/
