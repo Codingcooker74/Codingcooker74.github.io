@@ -23,7 +23,17 @@ print("Gemini가 글을 작성 중입니다...")
 prompt = """
 당신은 IT 전문 블로거입니다. 
 오늘의 최신 AI 기술 트렌드 1가지에 대해 블로그 포스트를 작성해 주세요.
-반드시 Markdown 형식으로 작성하고, 제목은 # 로 시작해 주세요.
+
+**중요: 반드시 아래와 같은 Jekyll Front Matter를 글의 최상단에 포함해야 합니다.**
+---
+layout: post
+title: "글 제목"
+date: YYYY-MM-DD HH:MM:SS +0900
+categories: [AI, Trend]
+tags: [AI, Gemini]
+---
+
+내용은 Markdown 형식으로 작성하고, 서론, 본론, 결론의 구조를 갖춰서 전문적으로 작성해 주세요.
 """
 
 try:
