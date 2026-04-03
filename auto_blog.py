@@ -10,7 +10,8 @@ import os
 GEMINI_API_KEY = "AIzaSyDNp2XQe8o8KMgQ6jMQSnRUFJ5CCy0Etv4"
 
 # 경로 앞에 'r'을 붙여서 윈도우 경로 오류(\)를 해결했습니다.
-BLOG_REPO_PATH = r"G:\다른 컴퓨터\내 노트북\Workspaces\Codingcooker74.github.io\posts" 
+BLOG_REPO_PATH = r"G:\다른 컴퓨터\내 노트북\Workspaces\Codingcooker74.github.io"
+POSTS_PATH = os.path.join(BLOG_REPO_PATH, "_posts")
 
 # ==========================================
 # 2. Gemini를 이용해 블로그 글(Markdown) 생성 (최신 문법)
@@ -38,7 +39,11 @@ try:
     # ==========================================
     today = datetime.datetime.now().strftime("%Y-%m-%d")
     file_name = f"{today}-ai-trend.md"
-    file_path = os.path.join(BLOG_REPO_PATH, file_name)
+    file_path = os.path.join(POSTS_PATH, file_name)
+
+    # _posts 폴더가 없으면 생성합니다.
+    if not os.path.exists(POSTS_PATH):
+        os.makedirs(POSTS_PATH)
 
     with open(file_path, "w", encoding="utf-8") as file:
         file.write(blog_content)
