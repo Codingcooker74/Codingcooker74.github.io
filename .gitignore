@@ -7,3 +7,4 @@ vendor/
 *.gem
 *.rbc
 .DS_Store
+desktop.ini

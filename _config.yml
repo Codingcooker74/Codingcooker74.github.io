@@ -1,14 +1,37 @@
 title: Codingcooker74's Blog
-email: your-email@example.com
-description: >-
-  코딩과 개발에 관한 다양한 이야기를 풀어내는 공간입니다.
-baseurl: ""
+tagline: 코딩과 개발에 관한 다양한 이야기를 풀어내는 공간입니다.
+description: 코딩과 개발에 관한 다양한 이야기를 풀어내는 공간입니다.
 url: "https://Codingcooker74.github.io"
-twitter_username: codingcooker
-github_username: Codingcooker74
+baseurl: ""
 
-# Build settings
-theme: minima
+github:
+  username: Codingcooker74
+twitter:
+  username: codingcooker
+social:
+  name: Codingcooker74
+  email: your-email@example.com
+
+timezone: Asia/Seoul
+lang: ko-KR
+
+theme: jekyll-theme-chirpy
+
+paginate: 10
+paginate_path: "/page:num/"
+
 plugins:
-  - jekyll-feed
+  - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-archives
+
+archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
