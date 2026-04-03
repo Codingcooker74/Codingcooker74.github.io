@@ -10,7 +10,7 @@ import os
 GEMINI_API_KEY = "AIzaSyDNp2XQe8o8KMgQ6jMQSnRUFJ5CCy0Etv4"
 
 # 경로 앞에 'r'을 붙여서 윈도우 경로 오류(\)를 해결했습니다.
-BLOG_REPO_PATH = r"G:\다른 컴퓨터\내 노트북\Workspaces\Codingcooker74.github.io" 
+BLOG_REPO_PATH = r"G:\다른 컴퓨터\내 노트북\Workspaces\Codingcooker74.github.io\posts" 
 
 # ==========================================
 # 2. Gemini를 이용해 블로그 글(Markdown) 생성 (최신 문법)
